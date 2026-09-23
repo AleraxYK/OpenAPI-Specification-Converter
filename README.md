@@ -1,5 +1,8 @@
 # OpenAPI Specification Converter
 
+![License](https://img.shields.io/github/license/AleraxYK/OpenAPI-Specification-Converter)
+![Python](https://img.shields.io/badge/python-3-blue)
+
 A small Python tool that converts an OpenAPI specification (YAML or JSON) into a clean, Swagger UI-style PDF document.
 
 It parses the spec and renders a formatted PDF including:
@@ -9,6 +12,10 @@ It parses the spec and renders a formatted PDF including:
 - Request parameters, request bodies, and responses (with status code badges)
 - Recursively rendered schemas, including resolved `$ref` references, required fields, enums, and examples
 - A dedicated "Schemas" section listing all reusable component schemas
+
+## Why?
+
+Most OpenAPI tooling is built around interactive, browser-based documentation (Swagger UI, Redoc, etc.). That's great for exploring an API, but not always practical when you need something static and portable: a PDF to attach to an email, archive alongside a release, or hand to a client who doesn't have access to your docs server. This tool aims to keep the familiar Swagger UI look while producing that portable output.
 
 ## Requirements
 
@@ -50,6 +57,7 @@ ENTER THE PATH OF THE FILE TO CONVERT
 ./openapi.yaml
 ```
 
+
 The generated PDF is saved in the current directory, named after the input file (e.g. `openapi.yaml` → `openapi.pdf`).
 
 ## Project structure
@@ -57,3 +65,6 @@ The generated PDF is saved in the current directory, named after the input file 
 - [main.py](main.py) — CLI entry point, handles user input and file loading
 - [pdf_generator.py](pdf_generator.py) — builds the HTML representation of the spec and renders it to PDF via WeasyPrint
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
