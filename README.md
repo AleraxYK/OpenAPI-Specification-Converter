@@ -57,6 +57,3 @@ The generated PDF is saved in the current directory, named after the input file 
 - [main.py](main.py) — CLI entry point, handles user input and file loading
 - [pdf_generator.py](pdf_generator.py) — builds the HTML representation of the spec and renders it to PDF via WeasyPrint
 
-## License
-
-No license specified yet.
